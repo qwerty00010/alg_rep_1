@@ -23,7 +23,7 @@ data['smoker'] = data['smoker'].map({'yes': 1, 'no': 0}) # Palacz: 1, Niepalący
 X = data[['age', 'sex', 'bmi', 'children', 'smoker']].copy()
 Y = data[['charges']].copy() # Koszt ubezpieczenia, który chcemy przewidzieć
 
-# 5. Podział na dane treningowe (80%) i testowe (20%)
+# 5. Podział na dane treningowe (80%) i testowe (20%) 0.2 to 20 proc
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
 # 6. Normalizacja danych (Standardization)
