@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def linear_regression(X, theta):
     # h = X * theta: Obliczanie przewidywań modelu (hipoteza)
     return np.dot(X, theta)
@@ -29,3 +28,6 @@ def gradient_descent(X, Y, theta, alpha, num_iters):
         J_history.append(cost_function(X, Y, theta))
 
     return theta, J_history
+
+def predict_Yy(X_test, theta, y_pred):
+    y_pred = np.dot(X_test, theta)
