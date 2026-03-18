@@ -62,6 +62,26 @@ plt.ylabel("Wartości przewidywane")
 plt.title("Porównanie wyników modelu")
 plt.show()
 
+# Tworzymy wykres historii kosztu J(theta)
+plt.figure(figsize=(10, 6))
+plt.plot(J_history, color='red', linewidth=2) # Zmiana koloru linii na czerwony
+
+# Dodajemy wymagane opisy (Punkt z instrukcji)
+plt.title("Spadek wartości funkcji kosztu w czasie") # Tytuł wykresu
+plt.xlabel("Liczba iteracji") # Opis osi X
+plt.ylabel("Koszt J(theta)") # Opis osi Y
+
+# Dodajemy siatkę dla lepszej czytelności
+plt.grid(True)
+
+# ZAPIS WYKRESU DO PLIKU .PNG (Bardzo ważne!)
+plt.savefig("wykres_kosztu.png")
+
+# Wyświetlenie wykresu na ekranie
+plt.show()
+
+print("Wykres został zapisany jako 'wykres_kosztu.png'")
+
 # 13. Obliczanie współczynnika determinacji R2
 ss_res = np.sum((Y_test_final - Y_pred) ** 2) # Suma kwadratów reziduów
 ss_tot = np.sum((Y_test_final - np.mean(Y_test_final)) ** 2) # Całkowita suma kwadratów
